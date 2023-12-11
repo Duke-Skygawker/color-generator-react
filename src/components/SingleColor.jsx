@@ -1,12 +1,12 @@
-const SingleColor = ({ color }) => {
+const SingleColor = ({ color, toast }) => {
   const { hex, weight, type } = color;
 
   async function copyToClipboard(text) {
     try {
       await navigator.clipboard.writeText(text);
-      console.log("Text copied to clipboard");
+      toast.success("Text copied to clipboard");
     } catch (error) {
-      console.error("Failed to copy text: ", error);
+      toast.error("Failed to copy text: ", error);
     }
   }
 

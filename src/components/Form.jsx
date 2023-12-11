@@ -6,6 +6,7 @@ const Form = ({ submitColor }) => {
   const handleChange = (e) => {
     setColor(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     submitColor(color);
@@ -29,7 +30,11 @@ const Form = ({ submitColor }) => {
           id="color-text"
           onChange={handleChange}
         />
-        <button className="btn" type="submit">
+        <button
+          className="btn"
+          type="submit"
+          style={{ backgroundColor: color }}
+        >
           Submit
         </button>
       </form>

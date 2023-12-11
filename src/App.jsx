@@ -10,6 +10,7 @@ const App = () => {
 
   const addColor = (color) => {
     try {
+      // the number, 10, in this case is a step of incrementing the shades, possible future functionality to add, change the number per user input 1-100
       const newList = new Values(color).all(10);
       setColorList(newList);
     } catch (error) {

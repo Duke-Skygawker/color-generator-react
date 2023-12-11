@@ -4,9 +4,9 @@ import SingleColor from "./SingleColor";
 const ColorList = ({ list }) => {
   return (
     <section className="colors">
-      {list.map((color, index) => {
+      {list.map((color) => {
         const id = uuidv4();
-        return <SingleColor index={index} color={color} key={id} />;
+        return <SingleColor color={color} key={id} />;
       })}
     </section>
   );
